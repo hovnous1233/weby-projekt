@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    body {
+      background-color: lightblue;
+      background-blend-mode: overlay;
+      background-size: cover;
+      
+    }
+    .card {
+    border: 3px solid #dee2e6;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .nadpis{
+    font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <a class="navbar-brand" href="https://www.hokej.cz/tipsport-extraliga" target="_blank">
+        <img src="images/tipac.png" alt="Logo" style="width:45px;" class="ms-1">
+      </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Domů
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index2.html">Tabulka</a>
+              </li>
+             <li class="nav-item">
+                <a class="nav-link" href="index3.html">Výherci</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index6.html">Spolužáci</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index7.html">Administrace</a>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Statistiky
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index5.html">Střelci</a></li>
+                    <li><a class="dropdown-item" href="brankari.html">Brankáři</a></li>
+                    
+                  </ul>
+                </div>
+                </div>
+              </li>
+            </ul>
+      </nav>
+      <h2 class="text-center nadpis">Nejlepší střelci Tipsport extraligy</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class=" d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/tralemarks.png" class="img-fluid img-fluid rounded-circle 40px " alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center rounded-circle"> <span class="fi fi-cz"></span> Eduards Tralemarks</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1.</td>
+                        <td>Rytíři Kladno</td>
+                        <td class="fw-bold">51</td>
+                        <td>23</td>
+                        <td>28</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/beran.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center"> <span class="fi fi-cz"></span>Ondřej Beránek</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2.</td>
+                        <td>HC Energie Karlovy Vary</td>
+                        <td class="fw-bold">50</td>
+                        <td>30</td>
+                        <td>20</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/chlapik.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Filip Chlapík</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3.</td>
+                        <td>HC Sparta Praha</td>
+                        <td class="fw-bold">48</td>
+                        <td>15</td>
+                        <td>33</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/flek.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Jakub Flek</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>4.</td>
+                        <td>HC Kometa Brno</td>
+                        <td class="fw-bold">47</td>
+                        <td>24</td>
+                        <td>23</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/cervus.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Roman Červenka</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>5.</td>
+                        <td>HC Dynamo Pardubice</td>
+                        <td class="fw-bold">46</td>
+                        <td>19</td>
+                        <td>27</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/cernoch.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Jiří Černoch</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>6.</td>
+                        <td>HC Energie Karlovy Vary</td>
+                        <td class="fw-bold">45</td>
+                        <td>14</td>
+                        <td>31</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/nellis.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Anthony Nellis</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>7.</td>
+                        <td>HC VÍTKOVICE RIDERA</td>
+                        <td class="fw-bold">43</td>
+                        <td>23</td>
+                        <td>20</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/lantosi.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Róbert Lantoši</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>8.</td>
+                        <td>Bílí Tygři Liberec</td>
+                        <td class="fw-bold">42</td>
+                        <td>11</td>
+                        <td>31</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/flynn.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Oscar Flynn</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>9.</td>
+                        <td>Bílí Tygři Liberec</td>
+                        <td class="fw-bold">41</td>
+                        <td>24</td>
+                        <td>17</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/kasa.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Ondřej Kaše</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>10.</td>
+                        <td>HC VERVA Litvínov</td>
+                        <td class="fw-bold">41</td>
+                        <td>15</td>
+                        <td>26</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/gulas.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Milan Gulaš</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw.bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>11.</td>
+                        <td>Banes Motor Č. Budějovice</td>
+                        <td class="fw-bold">41</td>
+                        <td>14</td>
+                        <td>27</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <div class="d-flex justify-content-center align-items-center" style="max-height: 250px;">
+                <img src="images/strelci/kalus.png" class="img-fluid img-fluid rounded-circle 40px" alt="Obrázek">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Marek Kalus</h5>
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <thead class="table-secondary">
+                      <tr>
+                          <th class="fw-light">Poř.</th>
+                          <th class="fw-light">Tým</th>
+                          <th class="fw-bold">Body</th>
+                          <th class="fw-light">G</th>
+                          <th class="fw-light">A</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>12.</td>
+                        <td>HC VÍTKOVICE RIDERA</td>
+                        <td class="fw-bold">40</td>
+                        <td>17</td>
+                        <td>23</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+          
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<div class="fluid">
+    <div class="row"></div>
+    	
+<table class="table table-striped table-dark table-hover">
+    <tr>
+        <td>H</td>
+        <td>o</td>
+        <td>v</td>
+        <td>n</td>
+    </tr>
+    <tr>
+        <td>S</td>
+        <td>r</td>
+        <td>a </td>
+        <td>c</td>
+    </tr>
+    <tr>
+        <td>H</td>
+        <td>a</td>
+        <td>j</td>
+        <td>z</td>
+    </tr>
+</table>
+</div>
+<div class="progress">
+    <div class="progress-bar" style="width:69%">69%</div>
+  </div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

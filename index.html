@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootswatch/dist/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css+">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+      body {
+        background-color: lightblue;   
+        background-blend-mode: overlay;
+        background-size: cover;
+
+        }
+        .score-box {
+      background-color: #001f3f;
+      color: white;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      padding: 4px 12px;
+      display: inline-block;
+      min-width: 50px;
+      text-align: center;
+    }
+      .bracket 
+      {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+      .round 
+      {
+        text-align: center;
+        margin: 0 10px;
+      }
+      .match 
+      {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      }
+      .team 
+      {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .team span 
+      {
+        font-size: 0.9em;
+        color: #6c757d;
+      }
+      .score 
+      {
+        font-weight: bold;
+      }
+      .scoring{
+        font-weight: 400;
+      }
+      .next-round 
+      {
+        margin-top: 65px;
+      }
+      .next-round-center
+      {
+        margin-top: 110px;
+      }
+      .team-logo-min  {
+          width: 20px;
+          height: 20px;
+      }
+      .team-name-min {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+      }
+      .custom-table th, .custom-table td {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          padding: 15px;
+          vertical-align: middle;
+      }
+      .custom-table tbody tr {
+          border-bottom: 1px solid #dee2e6;
+      }
+      .custom-table tbody tr {
+          display: table-row;
+      }
+      .custom-table tbody tr + tr {
+          margin-top: 15px;
+          display: table-row;
+      }
+      .team-name {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          font-size: 1.1rem;
+          font-weight: bold;
+      }
+      .team-name-tip {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 500px;
+          font-size: 5rem;
+          font-weight: bold;
+          
+      }
+      .team-logo  {
+          width: 33px;
+          height: 33px;
+      }
+      .team-logo  {
+          width: 30px;
+          height: 30px;
+      }
+      .tipac-logo{
+        width: 150px;
+        height: 100px;
+      }
+      
+      .table-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nadpis
+        {
+          font-weight: bold;
+        }
+        .small-text {
+      font-size: 0.8rem;
+      color: #666;
+      }
+      .stiny{
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      }
+      .sirska{
+       margin-left: 50px;
+       margin-right: 50px;
+      }
+      .sirska1{
+       margin-left: 50px;
+       margin-right: 50px;
+      }
+      .sirska2{
+       margin-left: 50px;
+       margin-right: 50px;
+      }
+      .leva{
+        margin-left: 50px;
+      }
+      .text-color{
+        color: #001f3f;
+        font-weight: 800;
+      }
+    </style>
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <a class="navbar-brand" href="https://www.hokej.cz/tipsport-extraliga" target="_blank">
+        <img src="images/tipac.png" alt="Logo" style="width:45px;" class="ms-1">
+      </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <ul class="navbar-nav me-auto">
+              
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Domů
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index2.html">Tabulka</a>
+              </li>
+             <li class="nav-item">
+                <a class="nav-link" href="index3.html">Výherci</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index6.html">Spolužáci</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index7.html">Administrace</a>
+              </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Statistiky
+                  </button>
+                  
+                
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index5.html">Střelci</a></li>
+                    <li><a class="dropdown-item" href="brankari.html">Brankáři</a></li>
+                    
+                  </ul>
+                </div>
+                </div>
+              </li>
+            </ul>
+            
+        </div>
+      </nav>
+
+  <div class="container-fluid">
+    <h2 class="text-center nadpis">Pavouk Play-Off Extraligy 2025</h2>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="57"
+      aria-valuemin="0" aria-valuemax="100" style="width:57%">
+        57%
+      </div>
+    </div>
+    <div class="bracket">
+      <!-- Čtvrtfinále -->
+      <div class="round">
+        <h5 class="fw-bold">Čtvrtfinále</h5>
+        
+        <div class="match">
+          <div class="team">
+            <div class="fw-bold team-name-min"><img src="images/sparta.png" alt="Sparta" class="team-logo-min">Sparta Praha<span class="scoring">(1)</span></div>
+            <div class="score">4</div>
+          </div>
+          <div class="team">
+            <div class="team-name-min "><img src="images/trinec.png" alt="Trinec" class="team-logo-min">Třinec<span class="scoring">(10)</span></div>
+            <div class="score">1</div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="team">
+            <div class="fw-bold team-name-min"><img src="images/kometa.png" alt="Kometa" class="team-logo-min">Kometa Brno<span class="scoring">(4)</span></div>
+            <div class="score">4</div>
+          </div>
+          <div class="team">
+            <div class="team-name-min"><img src="images/energie.png" alt="Energie" class="team-logo-min">Karlovy Vary <span class="scoring">(5)</span></div>
+            <div class="score">2</div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="team">
+            <div class="fw-bold team-name-min"><img src="images/hk.png" alt="HK" class="team-logo-min">Mountfield HK <span class="scoring">(2)</span></div>
+            <div class="score">4</div>
+          </div>
+          <div class="team">
+            <div class="team-name-min"><img src="images/boleslav.png" alt="Bolka" class="team-logo-min">Mladá Boleslav <span class="scoring">(9)</span></div>
+            <div class="score">3</div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="team">
+            <div class="fw-bold team-name-min"><img src="images/pardubice.png" alt="Dynamo" class="team-logo-min">Pardubice <span class="scoring">(3)</span></div>
+            <div class="score">4</div>
+          </div>
+          <div class="team">
+            <div class="team-name-min"><img src="images/motor.png" alt="Motor" class="team-logo-min">Č. Budějovice <span class="scoring">(6)</span></div>
+            <div class="score">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Semifinále -->
+      <div class="round next-round">
+        <h5 class="fw-bold">Semifinále</h5>
+
+        <div class="match">
+          <div class="team">
+            <div class="team-name-min"><img src="images/sparta.png" alt="Sparta" class="team-logo-min">Sparta Praha<span class="scoring">(1)</span></div>
+            <div class="score">1</div>
+          </div>
+          <div class="team">
+            <div class="team-name-min"><img src="images/kometa.png" alt="Kometa" class="team-logo-min">Kometa Brno<span class="scoring">(4)</span></div>
+            <div class="score">1</div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="team">
+            <div class="team-name-min"><img src="images/hk.png" alt="HK" class="team-logo-min">Mountfield HK <span class="scoring">(2)</span></div>
+            <div class="score">1</div>
+          </div>
+          <div class="team">
+            <div class="team-name-min"><img src="images/pardubice.png" alt="Dynamo" class="team-logo-min">Pardubice <span class="scoring">(3)</span></div>
+            <div class="score">1</div>
+          </div>
+        </div>
+      </div>
+      <div class="round next-round-center fw">
+        <h5 class="fw-bold">Finále</h5>
+
+        <div class="match">
+          <div class="team">
+            <div>1A</div>
+            <div class="score">0</div>
+          </div>
+          <div class="team">
+            <div>2A</div>
+            <div class="score">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      
+      <h3 class="fw-bold leva">Semifinále</h3>
+      <h4 class="leva">Série HC Sparta Praha - HC Kometa Brno:</h4>
+      <div class="d-flex justify-content-center">
+      <table class="table custom-table text-center table-conteiner table-bordered stiny sirska">
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="team-name">Sparta <img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+              <td class="table-secondary">2</td>
+              <td class="small-text table-secondary">(0:1, 2:1, 0:1)</td>
+              <td class="table-secondary text-color ">3</td>
+              <td class="team-name text-start">Kometa <img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="team-name text-end ">Sparta <img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+              <td class="table-secondary text-color">3</td>
+              <td class="small-text table-secondary">(1:0, 2:0, 0:0)</td>
+              <td class="table-secondary">0</td>
+              <td class="team-name text-start">Kometa <img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+              <td colspan="3"></td>
+            </tr>
+              <tr>
+                  <td class="team-name ">Kometa<img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+                  <td class="table-secondary">SO</td>
+                  <td class="table-secondary">05.04.</td>
+                  <td class="table-secondary">17:00</td>
+                  <td class="team-name ">Sparta<img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+                  <td><a href="https://sport.ceskatelevize.cz/" target="_blank"><img src="images/ct.png" alt="Ct" class="team-logo"></a></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Kometa<img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+                  <td class="table-secondary">NE</td>
+                  <td class="table-secondary">06.04.</td>
+                  <td class="table-secondary">17:00</td>
+                  <td class="team-name ">Sparta<img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+                  <td><a href="https://oneplaysport.cz/" target="_blank"><img src="images/oneplay.png" alt="Oneplay" class="team-logo-str"></a></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Sparta<img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+                  <td class="table-secondary">ST</td>
+                  <td class="table-secondary">09.04.</td>
+                  <td class="table-secondary">18:30</td>
+                  <td class="team-name">Kometa<img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+                  <td><img src="images/otaznik.png" alt="Ot" class="team-logo-str"></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Kometa<img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+                  <td class="table-secondary">PÁ</td>
+                  <td class="table-secondary">11.04.</td>
+                  <td class="table-secondary">18:00</td>
+                  <td class="team-name">Sparta<img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+                  <td><img src="images/otaznik.png" alt="Ot" class="team-logo-str"></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Sparta<img src="images/sparta.png" alt="Sparta" class="team-logo"></td>
+                  <td class="table-secondary">NE</td>
+                  <td class="table-secondary">13.04.</td>
+                  <td class="table-secondary">18:30</td>
+                  <td class="team-name ">Kometa<img src="images/kometa.png" alt="Kometa" class="team-logo"></td>
+                  <td><img src="images/otaznik.png" alt="Ot" class="team-logo-str"></td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <h4 class="leva">Série Mountfield HK - HC Dynamo Pardubice:</h4>
+    <div class="d-flex justify-content-center">
+    
+      <table class="table custom-table text-center table-conteiner table-bordered stiny sirska1">
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="team-name text-end ">Hr.Králové<img src="images/hk.png" alt="HK" class="team-logo"></td>
+              <td class="table-secondary">2</td>
+              <td class="small-text table-secondary">(0:0, 0:2, 2:2)</td>
+              <td class="table-secondary text-color ">4</td>
+              <td class="team-name text-start">Dynamo<img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="team-name text-end ">Hr.Králové<img src="images/hk.png" alt="HK" class="team-logo"></td>
+              <td class="table-secondary text-color">3</td>
+              <td class="small-text table-secondary">(1:0, 0:2, 1:0, 1:0)</td>
+              <td class="table-secondary">2</td>
+              <td class="team-name text-start">Dynamo <img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+              <td colspan="3"></td>
+            </tr>
+              <tr>
+                  <td class="team-name ">Dynamo<img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+                  <td class="table-secondary">PO</td>
+                  <td class="table-secondary">07.04.</td>
+                  <td class="table-secondary">18:00</td>
+                  <td class="team-name ">Hr.Králové<img src="images/hk.png" alt="HK" class="team-logo"></td>
+                  <td><a href="https://oneplaysport.cz/" target="_blank"><img src="images/oneplay.png" alt="Oneplay" class="team-logo-str"></a></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Dynamo<img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+                  <td class="table-secondary">ÚT</td>
+                  <td class="table-secondary">08.04.</td>
+                  <td class="table-secondary">17:30</td>
+                  <td class="team-name ">Hr.Králové<img src="images/hk.png" alt="HK" class="team-logo"></td>
+                  <td><a href="https://sport.ceskatelevize.cz/" target="_blank"><img src="images/ct.png" alt="Ct" class="team-logo"></a></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Hr.Králové<img src="images/hk.png" alt="HK" class="team-logo"></td>
+                  <td class="table-secondary">ČT</td>
+                  <td class="table-secondary">10.04.</td>
+                  <td class="table-secondary">18:30</td>
+                  <td class="team-name ">Dynamo<img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+                  <td><img src="images/otaznik.png" alt="Ct" class="team-logo"></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Dynamo<img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+                  <td class="table-secondary">SO</td>
+                  <td class="table-secondary">12.04.</td>
+                  <td class="table-secondary">16:00</td>
+                  <td class="team-name">Hr.Králové <img src="images/hk.png" alt="HK" class="team-logo"></td>
+                  <td><img src="images/otaznik.png" alt="Ot" class="team-logo-str"></td>
+              </tr>
+              <tr>
+                  <td class="team-name ">Hr.Králové<img src="images/hk.png" alt="HK" class="team-logo"></td>
+                  <td class="table-secondary">PO</td>
+                  <td class="table-secondary">14.04.</td>
+                  <td class="table-secondary">18:00</td>
+                  <td class="team-name">Dynamo<img src="images/pardubice.png" alt="Dynamo" class="team-logo"></td>
+                  <td><img src="images/otaznik.png" alt="Ot" class="team-logo-str"></a></td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+      <h3 class=" fw-bold leva">Finále</h3>
+      <h4 class="leva">Série 1A - 2A:</h4>
+      <div class="d-flex justify-content-center">
+      
+      <table class="table custom-table text-center table-conteiner table-bordered stiny sirska">
+          <thead>
+          </thead>
+          <tbody>
+              <tr >
+                  <td class="team-name ">1A</td>
+                  <td class="table-secondary">ČT</td>
+                  <td class="table-secondary">17.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">2A</td>
+              </tr>
+              <tr >
+                  <td class="team-name ">1A</td>
+                  <td class="table-secondary">PÁ</td>
+                  <td class="table-secondary">18.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">2A</td>
+              </tr>
+              <tr>
+                  <td class="team-name ">2A</td>
+                  <td class="table-secondary">PO</td>
+                  <td class="table-secondary">21.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">1A</td>
+              </tr>
+              <tr>
+                  <td class="team-name ">2A</td>
+                  <td class="table-secondary">ÚT</td>
+                  <td class="table-secondary">22.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">1A</td>
+              </tr>
+              <tr>
+                  <td class="team-name ">1A</td>
+                  <td class="table-secondary">PÁ</td>
+                  <td class="table-secondary">25.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">2A</td>
+              </tr>
+              <tr>
+                  <td class="team-name ">2A</td>
+                  <td class="table-secondary">NE</td>
+                  <td class="table-secondary">27.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">1A</td>
+              </tr>
+              <tr>
+                  <td class="team-name "> 1A</td>
+                  <td class="table-secondary">ÚT</td>
+                  <td class="table-secondary">29.04.</td>
+                  <td class="table-secondary">00:00</td>
+                  <td class="team-name ">2A</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+</body>
+</html>
+
