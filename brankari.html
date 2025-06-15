@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/bootswatch/dist/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <style>
     .card {
@@ -26,48 +28,39 @@
 </head>
 <body>
  
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
       <a class="navbar-brand" href="https://www.hokej.cz/tipsport-extraliga" target="_blank">
-        <img src="images/tipac.png" alt="Logo" style="width:45px;" class="ms-1">
+        <img src="images/tipac.png" alt="Logo" style="width:50px;" class="ms-1">
       </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html">Domů
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index2.html">Tabulka</a>
-              </li>
-             <li class="nav-item">
-                <a class="nav-link" href="index3.html">Výherci</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index6.html">Spolužáci</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="index7.html">Administrace</a>
-              </li>
-              <li class="nav-item dropdown">
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Statistiky
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="index5.html">Střelci</a></li>
-                    <li><a class="dropdown-item" href="brankari.html">Brankáři</a></li>
-                    
-                  </ul>
-                </div>
-                </div>
-              </li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto mb-2 ">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Domů</a></li>
+          <li class="nav-item"><a class="nav-link" href="index2.html">Tabulka</a></li>
+          <li class="nav-item"><a class="nav-link" href="index3.html">Výherci</a></li>
+          <li class="nav-item"><a class="nav-link" href="index6.html">Spolužáci</a></li>
+          <li class="nav-item"><a class="nav-link" href="index7.html">Kontaktní formulář</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Statistiky
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index5.html">Střelci</a></li>
+              <li><a class="dropdown-item" href="brankari.html">Brankáři</a></li>
             </ul>
-        </div>
-      </nav>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 ">
+          <li class="nav-item"><a class="nav-link" href="index8.html">Registrace</a></li>
+          <li class="nav-item"><a class="nav-link" href="index9.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
       <h2 class="text-center nadpis ">Nejlepší brankáři Tipsport extraligy</h2>
       <div class="container-fluid">
         <div class="row">
@@ -78,7 +71,7 @@
                 <img src="images/brankari/zajic.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Šimon Zajíček</h5>
+                <h5 class="card-title fw-bold text-center"> <span class="fi fi-cz"></span>  Šimon Zajíček</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -110,7 +103,7 @@
                 <img src="images/brankari/koren.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Josef Kořenář</h5>
+                <h5 class="card-title fw-bold text-center"> <span class="fi fi-cz"></span>  Josef Kořenář</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -142,7 +135,7 @@
                 <img src="images/brankari/malik.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Nick Malík</h5>
+                <h5 class="card-title fw-bold text-center"> <span class="fi fi-cz"></span>  Nick Malík</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -174,7 +167,7 @@
                 <img src="images/brankari/kvaca.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Petr Kváča</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Petr Kváča</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -206,7 +199,7 @@
                 <img src="images/brankari/postava.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Michal Postava</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Michal Postava</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -238,7 +231,7 @@
                 <img src="images/brankari/mazak.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Marek Mazanec</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Marek Mazanec</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -270,7 +263,7 @@
                 <img src="images/brankari/furch.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Dominik Furch</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Dominik Furch</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -302,7 +295,7 @@
                 <img src="images/brankari/skvovar.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Stanislav Škorvánek</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-sk"></span>  Stanislav Škorvánek</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -334,7 +327,7 @@
                 <img src="images/brankari/kacetl.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Ondřej Kacetl</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Ondřej Kacetl</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -366,7 +359,7 @@
                 <img src="images/brankari/frodl.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Dominik Frodl</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Dominik Frodl</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -398,7 +391,7 @@
                 <img src="images/brankari/tomek.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Matěj Tomek</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Matěj Tomek</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">
@@ -430,7 +423,7 @@
                 <img src="images/brankari/will.png" class="img-fluid" alt="Obrázek">
               </div>
               <div class="card-body">
-                <h5 class="card-title fw-bold text-center">Roman Will</h5>
+                <h5 class="card-title fw-bold text-center"><span class="fi fi-cz"></span>  Roman Will</h5>
                 <div class="table-responsive">
                   <table class="table table-borderless">
                     <thead class="table-secondary">

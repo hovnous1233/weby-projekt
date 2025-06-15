@@ -16,6 +16,7 @@
         .nadpis
         {
           font-weight: bold;
+          margin-bottom: auto;
         }
         
     </style>
@@ -23,51 +24,54 @@
 <body>
   
   <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-    <a class="navbar-brand" href="https://www.hokej.cz/tipsport-extraliga" target="_blank">
-      <img src="images/tipac.png" alt="Logo" style="width:45px;" class="ms-1">
-    </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          <ul class="navbar-nav me-auto">
-            
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Domů
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index2.html">Tabulka</a>
-            </li>
-           <li class="nav-item">
-              <a class="nav-link" href="index3.html">Výherci</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index6.html">Spolužáci</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index7.html">Administrace</a>
-            </li>
-            <li class="nav-item dropdown">
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Statistiky
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="index5.html">Střelci</a></li>
-                  <li><a class="dropdown-item" href="brankari.html">Brankáři</a></li>
-                  
-                </ul>
-              </div>
-              </div>
-            </li>
-          </ul>
-          
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://www.hokej.cz/tipsport-extraliga" target="_blank">
+        <img src="images/tipac.png" alt="Logo" style="width:50px;" class="ms-1">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto mb-2 ">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Domů</a></li>
+          <li class="nav-item"><a class="nav-link" href="index2.html">Tabulka</a></li>
+          <li class="nav-item"><a class="nav-link" href="index3.html">Výherci</a></li>
+          <li class="nav-item"><a class="nav-link" href="index6.html">Spolužáci</a></li>
+          <li class="nav-item"><a class="nav-link" href="index7.html">Kontaktní formulář</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Statistiky
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index5.html">Střelci</a></li>
+              <li><a class="dropdown-item" href="brankari.html">Brankáři</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 ">
+          <li class="nav-item"><a class="nav-link" href="index8.html">Registrace</a></li>
+          <li class="nav-item"><a class="nav-link" href="index9.html">Login</a></li>
+        </ul>
       </div>
-    </nav>
-        <div class="container-fluid table-responsive">
-    <h2 class="text-center nadpis nadpis">Tabulka Tipsport Extraliga 2025</h2>
-    <table class= "table">
+    </div>
+  </nav>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#home">2023-2024</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu1">2024-2025</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu2">2025-2026</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane active"><br>
+   <h2 class="text-center nadpis ">Tabulka Tipsport Extraligy 2023-2024</h2>
+   <div class="container-fluid table-responsive">
+      <table class="table mt-3">
         <thead>
       <tr>
         <th colspan="2" class="fw-light">Poř.</th>
@@ -80,118 +84,382 @@
     <tbody>
       <tr>
         <td>1.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/sparta.png"></td>
-        <td>HC Sparta Praha</td>
-        <td>52</td>
-        <td>177:110</td>
-        <td class="fw-bold">104</td>
-        </tr>
-      <tr>
-        <td>2.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/hk.png"></td>
-        <td>Mountfield HK</td>
-        <td>52</td>
-        <td>137:130</td>
-        <td class="fw-bold">91</td>
-        </tr>
-      <tr>
-        <td>3.</td>
         <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/pardubice.png"></td>
         <td>HC Dynamo Pardubice</td>
         <td>52</td>
-        <td>149:126</td>
-        <td class="fw-bold">88</td>
+        <td>205:115</td>
+        <td class="fw-bold">121</td>
+        </tr>
+      <tr>
+        <td>2.</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/sparta.png"></td>
+        <td>HC Sparta Praha</td>
+        <td>52</td>
+        <td>172:119</td>
+        <td class="fw-bold">111</td>
+        </tr>
+      <tr>
+        <td>3.</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/trinec.png"></td>
+        <td>HC Oceláři Třinec</td>
+        <td>52</td>
+        <td>172:132</td>
+        <td class="fw-bold">99</td>
         </tr>
       <tr>
         <td>4.</td>
         <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/kometa.png"></td>
         <td>HC Kometa Brno</td>
         <td>52</td>
-        <td>147:139</td>
-        <td class="fw-bold">84</td>
+        <td>160:139</td>
+        <td class="fw-bold">86</td>
         </tr>
       <tr>
         <td>5.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/energie.png"></td>
-        <td>HC Energie Karlovy Vary</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/verva.png"></td>
+        <td>HC VERVA Litvínov</td>
         <td>52</td>
-        <td>142:139</td>
-        <td class="fw-bold">82</td>
+        <td>163:165</td>
+        <td class="fw-bold">83</td>
       </tr>
         <tr>
         <td>6.</td>
         <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/motor.png"></td>
         <td>Banes Motor Č. Budějovice</td>
         <td>52</td>
-        <td>141:148</td>
-        <td class="fw-bold">80</td>
+        <td>147:149</td>
+        <td class="fw-bold">83</td>
         </tr>
       <tr>
         <td>7.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle" style="height: 40px;float: left;" src="images/verva.png"></td>
-        <td>HC VERVA Litvínov</td>
-        <td>52</td>
-        <td>123:128</td>
-        <td class="fw-bold">80</td>
-        </tr>
-      <tr>
-        <td>8.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/skoda.png"></td>
-        <td>HC Škoda Plzeň</td>
-        <td>52</td>
-        <td>118:133</td>
-        <td class="fw-bold">78</td>
-        </tr>
-      <tr>
-        <td>9.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/boleslav.png"></td>
-        <td>BK Mladá Boleslav</td>
-        <td>52</td>
-        <td>137:136</td>
-        <td class="fw-bold">76</td>
-        </tr>
-      <tr>
-        <td>10.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle 40px " style="height: 40px;float: left;" src="images/trinec.png"></td>
-        <td>HC Oceláři Třinec</td>
-        <td>52</td>
-        <td>121:123</td>
-        <td class="fw-bold">74</td>
-        </tr>
-      <tr>
-        <td>11.</td>
         <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle" style="height: 40px;float: left;" src="images/tigri.png"></td>
         <td>Bílí Tygři Liberec</td>
         <td>52</td>
-        <td>141:149</td>
-        <td class="fw-bold">71</td>
+        <td>174:165</td>
+        <td class="fw-bold">82</td>
         </tr>
       <tr>
-        <td>12.</td>
+        <td>8.</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/hk.png"></td>
+        <td>Mountfield HK</td>
+        <td>52</td>
+        <td>135:137</td>
+        <td class="fw-bold">75</td>
+        </tr>
+      <tr>
+        <td>9.</td>
         <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/vitkovice.png"></td>
         <td>HC VÍTKOVICE RIDERA</td>
         <td>52</td>
-        <td>144:162</td>
-        <td class="fw-bold">64</td>
+        <td>132:138</td>
+        <td class="fw-bold">72</td>
+        </tr>
+      <tr>
+        <td>10.</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle 40px " style="height: 40px;float: left;" src="images/olomouc.png"></td>
+        <td>HC Olomouc</td>
+        <td>52</td>
+        <td>123:155</td>
+        <td class="fw-bold">68</td>
+        </tr>
+      <tr>
+        <td>11.</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle" style="height: 40px;float: left;" src="images/energie.png"></td>
+        <td>HC Energie Karlovy Vary</td>
+        <td>52</td>
+        <td>128:146</td>
+        <td class="fw-bold">61</td>
+        </tr>
+      <tr>
+        <td>12.</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/skoda.png"></td>
+        <td>HC Škoda Plzeň</td>
+        <td>52</td>
+        <td>130:155</td>
+        <td class="fw-bold">58</td>
         </tr>
       <tr>
         <td>13.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid"  style="height: 40px;float: left;" src="images/kladno.png"></td>
-        <td>Rytíři Kladno</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid"  style="height: 40px;float: left;" src="images/boleslav.png"></td>
+        <td>BK Mladá Boleslav</td>
         <td>52</td>
-        <td>141:164</td>
-        <td class="fw-bold">63</td>
+        <td>106:154</td>
+        <td class="fw-bold">54</td>
         </tr>
       <tr>
         <td>14.</td>
-        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/olomouc.png"></td>
-        <td>HC Olomouc</td>
+        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/kladno.png"></td>
+        <td>Rytíři Kladno</td>
         <td>52</td>
-        <td>121:152</td>
-        <td class="fw-bold">57</td>
+        <td>120:196</td>
+        <td class="fw-bold">39</td>
         </tr>
     </tbody>
     </table>
+  </div>
 </div>
+    <div id="menu1" class="tab-pane fade"><br>
+      <h2 class="text-center nadpis ">Tabulka Tipsport Extraligy 2024-2025</h2>
+      <div class="container-fluid table-responsive">
+        <table class="table mt-3">
+            <thead>
+          <tr>
+            <th colspan="2" class="fw-light">Poř.</th>
+            <th class="fw-light">Klub</th>
+            <th class="fw-light">Z</th>
+            <th class="fw-light">Skóre</th>
+            <th class="fw-bold">Body</th>
+          </tr>  
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/sparta.png"></td>
+            <td>HC Sparta Praha</td>
+            <td>52</td>
+            <td>177:110</td>
+            <td class="fw-bold">104</td>
+            </tr>
+          <tr>
+            <td>2.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/hk.png"></td>
+            <td>Mountfield HK</td>
+            <td>52</td>
+            <td>137:130</td>
+            <td class="fw-bold">91</td>
+            </tr>
+          <tr>
+            <td>3.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/pardubice.png"></td>
+            <td>HC Dynamo Pardubice</td>
+            <td>52</td>
+            <td>149:126</td>
+            <td class="fw-bold">88</td>
+            </tr>
+          <tr>
+            <td>4.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/kometa.png"></td>
+            <td>HC Kometa Brno</td>
+            <td>52</td>
+            <td>147:139</td>
+            <td class="fw-bold">84</td>
+            </tr>
+          <tr>
+            <td>5.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/energie.png"></td>
+            <td>HC Energie Karlovy Vary</td>
+            <td>52</td>
+            <td>142:139</td>
+            <td class="fw-bold">82</td>
+          </tr>
+            <tr>
+            <td>6.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/motor.png"></td>
+            <td>Banes Motor Č. Budějovice</td>
+            <td>52</td>
+            <td>141:148</td>
+            <td class="fw-bold">80</td>
+            </tr>
+          <tr>
+            <td>7.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle" style="height: 40px;float: left;" src="images/verva.png"></td>
+            <td>HC VERVA Litvínov</td>
+            <td>52</td>
+            <td>123:128</td>
+            <td class="fw-bold">80</td>
+            </tr>
+          <tr>
+            <td>8.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/skoda.png"></td>
+            <td>HC Škoda Plzeň</td>
+            <td>52</td>
+            <td>118:133</td>
+            <td class="fw-bold">78</td>
+            </tr>
+          <tr>
+            <td>9.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/boleslav.png"></td>
+            <td>BK Mladá Boleslav</td>
+            <td>52</td>
+            <td>137:136</td>
+            <td class="fw-bold">76</td>
+            </tr>
+          <tr>
+            <td>10.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle 40px " style="height: 40px;float: left;" src="images/trinec.png"></td>
+            <td>HC Oceláři Třinec</td>
+            <td>52</td>
+            <td>121:123</td>
+            <td class="fw-bold">74</td>
+            </tr>
+          <tr>
+            <td>11.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid rounded-circle" style="height: 40px;float: left;" src="images/tigri.png"></td>
+            <td>Bílí Tygři Liberec</td>
+            <td>52</td>
+            <td>141:149</td>
+            <td class="fw-bold">71</td>
+            </tr>
+          <tr>
+            <td>12.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/vitkovice.png"></td>
+            <td>HC VÍTKOVICE RIDERA</td>
+            <td>52</td>
+            <td>144:162</td>
+            <td class="fw-bold">64</td>
+            </tr>
+          <tr>
+            <td>13.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid"  style="height: 40px;float: left;" src="images/kladno.png"></td>
+            <td>Rytíři Kladno</td>
+            <td>52</td>
+            <td>141:164</td>
+            <td class="fw-bold">63</td>
+            </tr>
+          <tr>
+            <td>14.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/olomouc.png"></td>
+            <td>HC Olomouc</td>
+            <td>52</td>
+            <td>121:152</td>
+            <td class="fw-bold">57</td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>  
+    <div id="menu2" class="tab-pane fade"><br>
+      <h2 class="text-center nadpis ">Tabulka Tipsport Extraligy 2025-2026</h2>
+      <div class="container-fluid table-responsive">
+        <table class="table mt-3">
+            <thead>
+          <tr>
+            <th colspan="2" class="fw-light">Poř.</th>
+            <th class="fw-light">Klub</th>
+            <th class="fw-light">Z</th>
+            <th class="fw-light">Skóre</th>
+            <th class="fw-bold">Body</th>
+          </tr>  
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/energie.png"></td>
+            <td>HC Energie Karlovy Vary </td>
+            <td>0</td>
+            <td>0:0</td>
+            <td class="fw-bold">0</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/kladno.png"></td>
+              <td>Rytíři Kladno</td>
+              <td>0</td>
+              <td>0:0</td>
+              <td class="fw-bold">0</td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/tigri.png"></td>
+                <td>Bílí Tygři Liberec</td>
+                <td>0</td>
+                <td>0:0</td>
+                <td class="fw-bold">0</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/verva.png"></td>
+                  <td>HC VERVA Litvínov</td>
+                  <td>0</td>
+                  <td>0:0</td>
+                  <td class="fw-bold">0</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/pardubice.png"></td>
+                    <td>HC Dynamo Pardubice</td>
+                    <td>0</td>
+                    <td>0:0</td>
+                    <td class="fw-bold">0</td>
+                    </tr>
+                    <tr>
+                      <td>6.</td>
+                      <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/skoda.png"></td>
+                      <td>HC Škoda Plzeň</td>
+                      <td>0</td>
+                      <td>0:0</td>
+                      <td class="fw-bold">0</td>
+                      </tr>
+                      <tr>
+                        <td>7.</td>
+                        <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/sparta.png"></td>
+                        <td>HC Sparta Praha</td>
+                        <td>0</td>
+                        <td>0:0</td>
+                        <td class="fw-bold">0</td>
+                        </tr>
+                        <tr>
+                          <td>8.</td>
+                          <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/trinec.png"></td>
+                          <td>HC Oceláři Třinec</td>
+                          <td>0</td>
+                          <td>0:0</td>
+                          <td class="fw-bold">0</td>
+                          </tr>
+                          <tr>
+                            <td>9.</td>
+                            <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/vitkovice.png"></td>
+                            <td>HC VÍTKOVICE RIDERA</td>
+                            <td>0</td>
+                            <td>0:0</td>
+                            <td class="fw-bold">0</td>
+                            </tr>
+                            <tr>
+                              <td>10.</td>
+                              <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/boleslav.png"></td>
+                              <td>BK Mladá Boleslav</td>
+                              <td>0</td>
+                              <td>0:0</td>
+                              <td class="fw-bold">0</td>
+                              </tr>
+                              <tr>
+                                <td>11.</td>
+                                <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/olomouc.png"></td>
+                                <td>HC Olomouc</td>
+                                <td>0</td>
+                                <td>0:0</td>
+                                <td class="fw-bold">0</td>
+                                </tr>
+                                <tr>
+                                  <td>12.</td>
+                                  <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/kometa.png"></td>
+                                  <td>HC Kometa Brno</td>
+                                  <td>0</td>
+                                  <td>0:0</td>
+                                  <td class="fw-bold">0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>13.</td>
+                                    <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/hk.png"></td>
+                                    <td>Mountfield HK</td>
+                                    <td>0</td>
+                                    <td>0:0</td>
+                                    <td class="fw-bold">0</td>
+                                    </tr>
+                                    <tr>
+                                      <td>14.</td>
+                                      <td style="padding-top: 0; padding-bottom: 0 "><img class="img-fluid" style="height: 40px;float: left;" src="images/motor.png"></td>
+                                      <td>Banes Motor Č. Budějovice</td>
+                                      <td>0</td>
+                                       <td>0:0</td>
+<td class="fw-bold">0</td>
+</tr>                                   
+</tbody>
+</table>
+
+            
+    </div>
+  </div>
+
 </body>
 </html>
